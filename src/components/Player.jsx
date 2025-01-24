@@ -1,10 +1,11 @@
 import { useState } from 'react';
 
 export default function Player() {
-  const [enteredPlayerName, setEnteredPlayerName] = useState('');
+  const [enteredPlayerName, setEnteredPlayerName] = useState(null);
   const [submitted, setSubmitted] = useState(false);
 
   function handleChange(event) {
+    setSubmitted(false);
     setEnteredPlayerName(event.target.value);
   }
  
